@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grade</title>
+</head> 
+<body>
+    <div id= "main">
+        <h1>STUDENT GRADE</h1>
+        <h2>Full Name:</h2> <input type="name" id="name" placeholder="insert name" onchange=getName()>
+        <h3>Input Score:</h3> <input type="name"id="score" placeholder="insert score" onchange=getScore()>
+        <p><button type='button' onclick="checkResult();">Get Grade</button></p>
+        </div>
+
+    <div id="secmain">
+        <h4>Student name:</h4> <span id="displayName">
+        </span>
+        <h5>Grade:</h5><span id="displayGrade"></span>
+    </div>
+        <script>
+            var name;
+            var grade;
+         function getName(){
+            name = document.getElementById("name").value;
+            
+         }
+         function getScore(){
+            grade = document.getElementById("score").value;
+
+         }
+         checkResult=()=>{
+            var displayName = document.getElementById("displayName");
+            displayName.textContent = name;
+            if(grade < 0){
+                
+                displayGrade.innerHTML = "<h3>No such grade exists</h3>";
+            }
+            else if(grade <= 39){
+                
+            displayGrade.innerHTML = "<h3>fail</h3>";
+            }
+                else if(grade <= 40){
+                
+            displayGrade.innerHTML = "<h3>pass</h3>";
+            }
+                else if(grade <= 50){
+                
+            displayGrade.innerHTML = "<h3>average</h3>";
+            }
+                else if(grade <= 60){
+                
+            displayGrade.innerHTML = "<h3>good</h3>";
+            }
+            else if(grade <= 70){
+                
+            displayGrade.innerHTML = "<h3>very good</h3>";
+            }
+            else if(grade <= 100){
+                
+                displayGrade.innerHTML = "<h3>excellent</h3>";
+                }
+                else {
+                    displayGrade.innerHTML=  "<h3>No such grade exists</h3>";
+                }
+         }
+
+
+        </script>
+    
+</body>
+</html>
